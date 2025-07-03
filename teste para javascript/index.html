@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de controle de acesso</title>
+</head>
+<body> 
+
+    <script>
+        const nome = prompt("informe seu nome:");
+        let nivel = prompt("informe seu nivel (1-adm, 2-moderador, 3-visitante)");
+        if (nivel === "1"){
+            alert("olá, adm" + nome);
+        } else if (nivel === "2"){
+            alert ("olá moderador" + nome);
+        } else if (nivel === "3"){
+            alert ("Bem-vindo visitante" + nome);
+        } else {
+            alert("seu acesso está invalido");
+        }
+
+        //tentativas
+
+        let tentativas = 0
+        while (tentativas <3)
+        {
+            const senha = prompt("digite sua senha");
+            if (senha === "123"){
+                alert ("senha correta! sejá bem-vindo a plataforma de acesso.");
+                break
+            }else {
+                tentativas++;
+                if (tentativas <3){
+                    alert ("senha invalida. tente novamente.");
+                }else {
+                    alert ("seu número de tentativas foi atingido. acesso negado.");
+            
+                }
+            }
+
+        }
+           
+    </script>
+
+<script src="/script.js"></script> 
+
+</body>
+</html>
